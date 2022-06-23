@@ -52,3 +52,25 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+function sendContact() {
+    const name = document.body.querySelector('#name').value;
+    const email = document.body.querySelector('#email').value;
+    const message = document.body.querySelector('#message').value;
+    const phone = document.body.querySelector('#phone').value;
+
+    axios.post('http://localhost:8055/items/contatos', {
+        name: name,
+        email: email,
+        message: message,
+        phone: phone
+    })
+    .then((response) => {
+        alert("Enviado com sucesso!");
+    })
+    .catch((error) => {
+        alert("Erro ao enviar mensagem!");
+    })
+}
+
