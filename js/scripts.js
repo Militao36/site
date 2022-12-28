@@ -57,7 +57,6 @@ window.addEventListener('DOMContentLoaded', event => {
 const urlDirectus = 'https://7sv72a2j.directus.app'
 
 function getMetriscts() {
-    const data = new Date().toISOString()
     const data = {
         service: 'site',
         key: 'access-site',
@@ -70,7 +69,7 @@ function getMetriscts() {
 
 getMetriscts()
 
-function send() {
+function sendData() {
     const data = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
