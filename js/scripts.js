@@ -59,8 +59,8 @@ const urlDirectus = 'https://7sv72a2j.directus.app'
 function getMetriscts() {
     const data = new Date().toISOString()
     const data = {
-        service: document.getElementById('name').value,
-        key: document.getElementById('email').value,
+        service: 'site',
+        key: 'access-site',
         value: 1
     }
     axios.post(`${urlDirectus}/items/metrics`, data)
