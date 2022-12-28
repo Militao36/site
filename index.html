@@ -245,18 +245,18 @@
                             <input class="form-control" id="email" type="email" placeholder="Email *" />
                         </div>
                         <div class="form-group mb-md-0">
-                            <input class="form-control" id="phone" type="tel" placeholder="Telefone/Celular *" />
+                            <input class="form-control" id="cell" type="tel" placeholder="Telefone/Celular *" />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
-                            <textarea class="form-control" id="message" placeholder="Mensagem *"></textarea>
+                            <textarea class="form-control" id="description" placeholder="Mensagem *"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary btn-xl text-uppercase" id="submitButton"
-                        type="submit">Enviar</button>
+                        type="button" onclick="send()">Enviar</button>
                 </div>
             </form>
         </div>
@@ -269,6 +269,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>

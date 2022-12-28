@@ -52,3 +52,31 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+const urlDirectus = 'https://7sv72a2j.directus.app'
+
+function getMetriscts() {
+    const data = new Date().toISOString()
+    const data = {
+        service: document.getElementById('name').value,
+        key: document.getElementById('email').value,
+        value: 1
+    }
+    axios.post(`${urlDirectus}/items/metrics`, data)
+        .then(() => console.log("Save metrics"))
+        .catch(() => console.error('Erro save metrics'))
+}
+
+function send() {
+    const data = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        cell: document.getElementById('cell').value,
+        description: document.getElementById('description').value
+    }
+
+    axios.post(`${urlDirectus}/items/contacts`, data)
+        .then(() => console.log("Send contact"))
+        .catch(() => console.error('Erro send contact'))
+}
