@@ -68,6 +68,8 @@ function getMetriscts() {
         .catch(() => console.error('Erro save metrics'))
 }
 
+getMetriscts()
+
 function send() {
     const data = {
         name: document.getElementById('name').value,
