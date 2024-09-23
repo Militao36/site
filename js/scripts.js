@@ -81,6 +81,4 @@ function sendData() {
         .catch(() => console.error('Erro send contact'))
 }
 
-function teste() {
-    console.log('adasdada')
-}
+document.getElementById('text-ebb').innerText = 'Em Março de 2023, iniciei minha trajetoria como desenvolvedor Backend na empresa Enviabybus. Onde estou até a data atual ' + `${new Date().getDate().toString().padStart(2, '0')}/${new Date().getMonth().toString().padStart(2, '0')}/${new Date().getFullYear()}`
